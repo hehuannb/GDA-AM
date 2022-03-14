@@ -1,0 +1,24 @@
+function [x,iter,res_hist, rest_hist] = GDA(g, solution, x, itmax, atol, print)
+
+res_hist = []; 
+rest_hist = [];
+tic
+for iter = 0:itmax    
+    if mod(iter, print) ==0 
+        res_norm = norm(x - solution);
+        fprintf('%d %e \n', iter, res_norm);
+        res_hist = [res_hist;[iter,res_norm]];
+        rest_hist = [rest_hist;[toc,res_norm]];
+    end
+    gval = g(x);
+    if res_norm <= atol || isnan(res_norm)
+        fprintf('Terminate with residual norm = %e \n\n', res_norm);
+        break;
+    end
+    x= gval;
+end
+
+if res_norm > atol && iter == itmax
+    fprintf('\n Terminate after itmax = %d iterations. \n', itmax);
+    fprintf(' Residual norm = %e \n\n', res_norm);
+end
