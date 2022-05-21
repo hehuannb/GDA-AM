@@ -1,5 +1,6 @@
 clear all; close all; clc
 disp('Generate random matrix')
+addpath('D:\GDA-AM\Gradient-Descent-Ascent-with-Anderson-Acceleration--GDA-AM-\matlab_GDAAM')
 n = 100;
 A = randn(n);
 A = A/norm(A);
@@ -11,7 +12,7 @@ fp0 = [xinit;yinit];
 xtrue = -A'\c;
 ytrue = -A\b;
 mMax = 10;  % used for Anderson Mixing, controls the memory table size
-itmax = 10000; % Iteration Number
+itmax = 50000; % Iteration Number
 atol = 1e-5;   
 lr = 1;
 print = 100;
@@ -94,4 +95,4 @@ set(gcf,'paperpositionmode','auto')
 set(gca,'FontSize',18)
 pos = get(gcf, 'Position');
 set(gcf, 'Position', [pos(1) pos(2) 3*200, 2.5*200]); 
-% print -depsc -r500 timepm
+exportgraphics(gcf,'barchart.png','Resolution',300)
