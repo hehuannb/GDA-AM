@@ -10,7 +10,7 @@ Yousef Saad
 This paper has been accepted in ICLR 2022.
 > Implementation of GDA-AM in Python and Matlab. It is a new approach to solve minimax optimization that shows significant improvement over existing methods including Extragradient and Optimistic Gradient Descent. It uses Anderson Acceleration to transform GDA to a convergent mapping. 
 
-<img src="1dpatha1.png" width="250" height="250">
+<img src="pictures/1dpatha.png" width="250" height="250">
 
 *Baseline methods fail to converge, whereas GDA-AM exhibits desirable behaviors.*
 
