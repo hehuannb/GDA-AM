@@ -1,4 +1,4 @@
-# GDA-AM: Solve minimax optimization via Anderson Acceleration(Mixing)
+# [GDA-AM: Solve minimax optimization via Anderson Acceleration(Mixing)](https://openreview.net/forum?id=3YqeuCVwy1d)
 
 by
 Huan He, 
@@ -7,17 +7,10 @@ Joyce Ho,
 Yuanzhe Xi,
 Yousef Saad
 
+This paper has been accepted in ICLR 2022.
 > Implementation of GDA-AM in Python and Matlab. It is a new approach to solve minimax optimization that shows significant improvement over existing methods including Extragradient and Optimistic Gradient Descent. It uses Anderson Acceleration to transform GDA to a convergent mapping. 
 
-
-> Fill out the sections below with the information for your paper.
-
-This paper has been accepted in ICLR 2022.
-
-> Brief description of what this paper is about (2-3 sentences). Include a
-> figure as well with the main result of your paper.
-
-![](1dpatha.png)
+![](1dpatha1.png)
 
 *Baseline methods fail to converge, whereas GDA-AM exhibits desirable behaviors.*
 
@@ -112,12 +105,12 @@ To execute the whole notebook, run all cells in order.
 
 You can freely use and modify the code, without warranty, so long as you provide attribution
 to the authors.
-
->@inproceedings{
+```
+@inproceedings{
 he2022gdaam,
 title={{GDA}-{AM}: {ON} {THE} {EFFECTIVENESS} {OF} {SOLVING} {MIN}-{IMAX} {OPTIMIZATION} {VIA} {ANDERSON} {MIXING}},
 author={Huan He and Shifan Zhao and Yuanzhe Xi and Joyce Ho and Yousef Saad},
 booktitle={International Conference on Learning Representations},
 year={2022},
 url={https://openreview.net/forum?id=3YqeuCVwy1d}
-}
+```
